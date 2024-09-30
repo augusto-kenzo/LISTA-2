@@ -2,39 +2,27 @@
 
 int main(){
 
-int num, cont, s_div;
+    int a, b=1, c=0;
 
-s_div = 0;
+    printf("Verificador de numeros perfeitos.\n\n");
 
-printf("digite um numero inteiro e positivo:");
-scanf("%d" , &num);
+    printf("Digite um numero inteiro e positivo:");
+    scanf("%d", &a);
 
-cont=1;
-
-while(cont < num){
-    if(num% cont==0){
-        s_div = s_div + cont;
+    while(a>b){
+        if(a % b == 0){
+        c += b;
+        }
+      b++;
     }
-    cont++;
-}
 
-if(s_div == num){
-    printf("o numero e perfeito");
-}
-    else{
-        printf("o numero nao e perfeito");
+   if(a == 0){
+    printf("O numero %d nao eh perfeito.",a);
+    }else if(c == a){
+    printf("O numero %d eh perfeito.",a);
+    }else{
+    printf("O numero %d nao eh perfeito.",a);
     }
-        return 0;
+
+    return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
